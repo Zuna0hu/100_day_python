@@ -1,0 +1,55 @@
+def wall_on_left():
+    turn_left()
+    result = wall_in_front()
+    turn_right()
+    print("wall_on_left:",result)
+    return result
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+def jump():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+def detect():
+    if wall_in_front():
+        turn_left()
+        while(wall_on_right()):
+            move()
+        turn_right()
+        move()
+        turn_right()
+        
+while at_goal() == False:
+    print("wall_in_front:",wall_in_front())
+    if wall_in_front()==False and wall_on_right()==False:
+        turn_right()
+        move()
+        turn_right()
+        move()
+        continue
+    while front_is_clear() and wall_on_right():
+        if at_goal():
+            break
+        move()
+    if wall_in_front() and wall_on_right():
+        turn_left()
+        continue
+    if wall_in_front() and wall_on_left():
+        turn_right()
+        continue
+    if (wall_in_front()==True) and (wall_on_right == False):
+        if(wall_on_left() == False):
+            turn_right()
+            move()
+            turn_right()
+            move()
+        continue
+
+
