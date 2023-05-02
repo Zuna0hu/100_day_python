@@ -18,3 +18,5 @@ The functions move() and turn_left().
 Either the test front_is_clear() or wall_in_front(), right_is_clear() or wall_on_right(), and at_goal().
 How to use a while loop and if/elif/else statements.
 It might be useful to know how to use the negation of a test (not in Python).
+
+The main idea in my solution is to move forward until there's a wall in front, and then prioritize turning right if there is no wall on the right. However, to avoid getting stuck in a loop, I also incorporate the occasional left turn and move after a certain number of iterations. This ensures that the robot explores different paths and has a higher chance of finding the exit.
