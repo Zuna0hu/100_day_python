@@ -22,7 +22,7 @@ By using OOP, we model real-life objects and their interactions, creating code t
 - **Editor**: Visual Studio Code
 - **Interpreter**: Python 3.10.12 64-bit (Linux built-in Python)
 - **Virtual Environment**: Python 3.10.12 64-bit
-- **Additional Installation**: If **tkinter** is not installed, you can install it with the following command in Linux terminal:
+- **Additional Installation**: If `tkinter` is not installed, you can install it with the following command in Linux terminal:
   
   ```bash
   sudo apt-get install python3-tk
