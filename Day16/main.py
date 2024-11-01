@@ -13,6 +13,12 @@ timmy = turtle.Turtle()
 
 print(timmy)
 
+# set the shape to turtle
+timmy.shape("turtle")
+
+# set the pen color to red, fill color to green
+timmy.color("red", "green")
+
 # add screen object
 my_screen = turtle.Screen()
 # print(my_screen.canvheight)
