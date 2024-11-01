@@ -12,3 +12,10 @@ timmy = turtle.Turtle()
 # timmy = Turtle()
 
 print(timmy)
+
+# add screen object
+my_screen = turtle.Screen()
+# print(my_screen.canvheight)
+
+# make the screen exit on click
+my_screen.exitonclick()
