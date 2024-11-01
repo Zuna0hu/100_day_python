@@ -26,3 +26,44 @@ By using OOP, we model real-life objects and their interactions, creating code t
   
   ```bash
   sudo apt-get install python3-tk
+
+
+## Installing PrettyTable in a Linux Virtual Environment
+
+This guide explains how to install the `prettytable` package in a Python virtual environment on Linux, using the terminal.
+
+### Step 1. Navigate to Your Project Directory
+
+First, open your terminal and navigate to the directory containing your project and virtual environment. For example, if your project is located in `~/repos/100_day_python/Day16`, run:
+
+```bash
+cd ~/repos/100_day_python/Day16
+```
+
+### Step 2. Activate the Virtual Environment
+
+Activate the virtual environment by running the following command:
+
+```bash
+source .venv/bin/activate
+```
+
+> **Note**: Replace `.venv` with the name of your virtual environment folder if it's different.
+
+### Step 3. Install PrettyTable
+
+With the virtual environment activated, use `pip` to install `prettytable`:
+
+```bash
+pip install prettytable
+```
+
+### Step 4. Verify the Installation
+
+To confirm that `prettytable` is installed, run:
+
+```bash
+python -c "import prettytable; print(prettytable.__version__)"
+```
+
+This should output the version of `prettytable`, confirming that it has been successfully installed.
