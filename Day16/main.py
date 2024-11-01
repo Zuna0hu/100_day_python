@@ -19,6 +19,9 @@ timmy.shape("turtle")
 # set the pen color to red, fill color to green
 timmy.color("red", "green")
 
+# make the object forward 100 steps/pixels
+timmy.forward(100)
+
 # add screen object
 my_screen = turtle.Screen()
 # print(my_screen.canvheight)
