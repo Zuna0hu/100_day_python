@@ -14,8 +14,11 @@ def coffee_machine():
         # Check the user's input and dispense the drink
         if choice == "espresso":
             print("Dispensing espresso...")
-            if (coffee_maker.is_resource_sufficient(menu.menu[1])):
-                coffee_maker.make_coffee(menu.menu[1])
+            if (coffee_maker.is_resource_sufficient(menu.menu[1])): # if the resources are sufficient
+                # customer need to pay
+                print(f"That should be ${menu.menu[1].cost}.")
+                if (money_machine.make_payment(menu.menu[1].cost)):
+                    coffee_maker.make_coffee(menu.menu[1])
         elif choice == "latte":
             print("Dispensing latte...")
             if (coffee_maker.is_resource_sufficient(menu.menu[0])):
@@ -29,6 +32,7 @@ def coffee_machine():
             break
         elif choice == "report":
             coffee_maker.report()
+            money_machine.report()
         else:
             print("Invalid option. Please choose espresso, latte, or cappuccino.")
         
