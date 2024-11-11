@@ -6,10 +6,14 @@ coffee_maker = CoffeeMaker()
 menu = Menu()
 money_machine = MoneyMachine()
 
+# all menu items
+options = menu.get_items()
+
 def coffee_machine():
     while True:
         # Prompt the user for their choice
-        choice = input("What would you like? (espresso/latte/cappuccino/ or type 'off' to quit): ").lower()
+        # choice = input("What would you like? (espresso/latte/cappuccino/ or type 'off' to quit): ").lower()
+        choice = input(f"What would you like? ({options} or type 'off' to quit): ").lower()
 
         # Check the user's input and dispense the drink
         if choice == "espresso":
