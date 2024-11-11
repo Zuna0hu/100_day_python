@@ -22,7 +22,9 @@ def coffee_machine():
         elif choice == "latte":
             print("Dispensing latte...")
             if (coffee_maker.is_resource_sufficient(menu.menu[0])):
-                coffee_maker.make_coffee(menu.menu[0])
+                print(f"That should be ${menu.menu[0].cost}.")
+                if (money_machine.make_payment(menu.menu[0].cost)):
+                    coffee_maker.make_coffee(menu.menu[0])
         elif choice == "cappuccino":
             print("Dispensing cappuccino...")
             if (coffee_maker.is_resource_sufficient(menu.menu[2])):
