@@ -33,6 +33,30 @@ Some of the projects I’ll be building along the way include:
 - A personal blog and a public API
 - Data analysis projects with Google Trends and App Store data
 
+## Setup
+- **Operating System**: Linux (Xubuntu virtual machine)
+- **Editor**: Visual Studio Code
+- **Interpreter**: Python 3.10.12 64-bit (Linux built-in Python)
+- **Virtual Environment**: Python 3.10.12 64-bit
+
+## How to Create an Environment in VS Code
+To set up a local Python environment in VS Code using either a virtual environment (Venv) or Anaconda, follow these steps:
+
+1. Open the Command Palette by pressing `Ctrl+Shift+P`.
+2. Type and select **Python: Create Environment**.
+
+This command will present you with options for environment types: **Venv** or **Conda**. 
+
+- **If you select Venv**, you'll be prompted to choose a Python interpreter to use as the base for your new virtual environment.
+
+After creating the environment, remember to activate it before running your code. You can activate an environment in the Command Palette by selecting **Python: Select Interpreter** and choosing the environment you've created.
+
+For more detailed instructions, refer to the official [VS Code Python environment tutorial](https://code.visualstudio.com/docs/python/environments).
+
+## Remember to Add `.venv` and `__pycache__` to `.gitignore`
+Make sure to add `.venv` and `__pycache__` to your `.gitignore` file. This prevents your virtual environment and Python's compiled bytecode files from being included in version control.
+
+You can refer to the `.gitignore` file on how to exclude these directories.
 
 ## Course Goals
 This repo is where I document my journey, track my progress, and showcase my learning as I work through the course.
