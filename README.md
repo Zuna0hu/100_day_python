@@ -1,11 +1,40 @@
-# 100 Day Python
-This repository contains my solutions to the projects in the "100 Days of Code - The Complete Python Pro Bootcamp" course on Udemy. In the following, I will provide some highlights of my solutions.
+# 100 Days of Code - The Complete Python Pro Bootcamp
 
-# Day 6
-The main idea in my solution is to move forward until there's a wall in front, and then prioritize turning right if there is no wall on the right. However, to avoid getting stuck in a loop, I also incorporate the occasional left turn and move after a certain number of iterations. This ensures that the robot explores different paths and has a higher chance of finding the exit.
+This is the repo with everything I have created along the way of following the **100 Days of Code - The Complete Python Pro Bootcamp** by Angela Yu. This course is designed to take anyone from beginner to professional Python developer with real-world projects every day.
 
-If we don't incorporate the occasional left turn and move after a certain number of iterations, the code may get stuck in a loop, as illustrated by the following scenario.
-<div style="display: flex; justify-content: center;">
-  <img src="https://user-images.githubusercontent.com/124393973/235746142-dd2dfd3f-4807-4139-b4d6-fd70129d257a.png"
- alt="reeborg" width="240" height="240">
-</div>
+## Course Overview
+
+### Course Structure
+- **100 Days of Code**: 1 hour per day for 100 days, with a new project each day.
+- **Comprehensive Curriculum**: Over 65 hours of video tutorials, covering Python basics to advanced applications in web development, data science, automation, and more.
+- **Hands-On Projects**: Practical, real-world projects that build coding skills and understanding.
+
+### Topics Covered
+- **Python Programming**: Core syntax, scripting, and advanced concepts.
+- **Web Development**: Frontend (HTML, CSS, Bootstrap) and Backend (Flask, REST APIs).
+- **Data Science**: Analysis and visualization with libraries like Pandas, NumPy, Matplotlib, and Seaborn.
+- **Automation**: Browser automation and web scraping with Selenium.
+- **Game Development**: Building classic games like Snake and Pong.
+- **Deployment**: Deploying apps on platforms like Heroku and GitHub Pages.
+
+## Tools and Technologies
+As you progress through the course, you will be working with:
+- **Python 3**
+- **PyCharm, Jupyter Notebook, Google Colab**
+- **Flask, SQL, SQLite, PostgreSQL**
+- **Git & GitHub for Version Control**
+- **Web Scraping with Beautiful Soup, Selenium**
+- **Data Visualization with Matplotlib, Plotly**
+
+## Example Projects
+Some of the projects I’ll be building along the way include:
+- Classic games like Blackjack and Pong
+- Automation tools like a Tinder auto swiper and LinkedIn job application bot
+- A personal blog and a public API
+- Data analysis projects with Google Trends and App Store data
+
+
+## Course Goals
+This repo is where I document my journey, track my progress, and showcase my learning as I work through the course.
+
+
