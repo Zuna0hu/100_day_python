@@ -15,11 +15,23 @@ driver.get("https://www.python.org/")
 # print(search_bar.get_attributes("placeholder"))
 # find_element(By.ID), By.CSS_SELECTOR, By.XPATH ...
 
-time1 = driver.find_element(By.XPATH, value='//*[@id="content"]/div/section/div[3]/div[2]/div/ul/li[1]/time')
-print(time1.get_attribute("datetime")[:10])
-place1 = driver.find_element(By.XPATH, value='//*[@id="content"]/div/section/div[3]/div[2]/div/ul/li[1]/a')
-print(place1.text)
+# how to find one pair of date and location
+# time1 = driver.find_element(By.XPATH, value='//*[@id="content"]/div/section/div[3]/div[2]/div/ul/li[1]/time')
+# print(time1.get_attribute("datetime")[:10])
+# place1 = driver.find_element(By.XPATH, value='//*[@id="content"]/div/section/div[3]/div[2]/div/ul/li[1]/a')
+# print(place1.text)
 
+events_dates = driver.find_elements(By.CSS_SELECTOR, value=".event-widget time")
+events_locs = driver.find_elements(By.CSS_SELECTOR, value=".event-widget a")
+events = {}
+
+for n in range(len(events_dates)):
+    events[n] = {
+        "date": events_dates[n].get_attribute("datetime")[:10],
+        "location": events_locs[n].text
+    }
+
+print(events)
 
 # to close the browser automatically
 # driver.close() # close the tab only
