@@ -10,7 +10,7 @@ chrome_options.add_experimental_option("detach", True)
 
 # create a driver for Chrome
 driver = webdriver.Chrome(options=chrome_options)
-driver.get("https://en.wikipedia.org/wiki/Main_Page")
+driver.get("http://secure-retreat-92358.herokuapp.com/")
 
 # how to click
 # element_to_click = driver.find_element(By. ...)
@@ -20,6 +20,19 @@ driver.get("https://en.wikipedia.org/wiki/Main_Page")
 # find the element
 # element_to_send.send_keys("Text", Keys.ENTER, Keys.TAB ...)
 
+# get the elements
+fname_element = driver.find_element(By.NAME, value="fName")
+lname_element = driver.find_element(By.NAME, value="lName")
+email_element = driver.find_element(By.NAME, value="email")
+button = driver.find_element(By.CLASS_NAME, value="btn")
+
+fname_element.send_keys("Jotaro")
+
+lname_element.send_keys("Kujo")
+
+email_element.send_keys("fake_email@fakemail.com")
+
+button.click()
 
 # quit the entire browser
-driver.quit()
+# driver.quit()
