@@ -1,5 +1,7 @@
 # Ignore the virtual environment in Day16
 Day16/.venv/
 Day16/__pycache__/
+Day33/.venv/
+Day33/__pycache__/
 Day48/.venv/
 Day48/__pycache__/
