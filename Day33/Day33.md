@@ -11,12 +11,11 @@ In this lesson, we learned about API endpoints, which are the locations where da
 
 A common format for the data returned by APIs is JSON, which is lightweight and easy to transfer over the internet. JSON can be compared to a flat-packed item from Ikea that can be easily reassembled into its original form once received. JSON is preferred because it's minimalistic and efficient for data transmission.
 
+API call and API request are often used interchangeably and generally mean the same thing: the action of sending a request to an API to retrieve or manipulate data.
+
 To make an API request in Python, we use the `requests` library. By importing this library and calling the `get()` method, you can fetch data from an API endpoint. The data returned is usually in JSON format, which can then be processed and used within your program.
 
 ---
-
-### API Calls
-
 ### API Parameters
 
 ## How to Install `requests` in a Virtual Environment on Ubuntu Linux
