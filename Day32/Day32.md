@@ -90,7 +90,7 @@ In some cases, as here in this repository, we have to give an automated process 
 ```
 2. **Add `config.json` to `.gitignore`**:
 ```bash
-config.json
+Day32/config.json
 ```
 3. **Read it in Python**:
 ```python
