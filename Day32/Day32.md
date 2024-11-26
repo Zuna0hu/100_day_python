@@ -78,7 +78,7 @@ This guide summarizes the process of sending emails programmatically using Pytho
       connection.sendmail("your_email@gmail.com", "recipient_email@yahoo.com", "Subject: Test\n\nHello!")
 ```
 ## Use Configuration Files
-Sometimes like in this repo, we need to input our email and password to automate the process of code. It is not recommended to explicitly include your email and password in the code file, but you can use a configuration file and exclude the file from Git so that only you can have access to it.
+In some cases, as here in this repository, we have to give an automated process our email and password. One should never include these directly in the code. Instead, set them in a configuration file and exclude that configuration file from version control, for example with.gitignore, so only you can read it.
 ---
 ### Implementation Steps
 1. **Create a `config.json` File**:
