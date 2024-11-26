@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 from API_main import iss_long,iss_lat # API_main will be executed
+import time # for doing the task every 5 min
 
 MY_LAT = 45.501690 # Montreal
 MY_LONG = -73.567253
@@ -91,12 +92,24 @@ def is_dark_in_montreal():
             return False
         
 
-print(now.hour)
-print(type(now.hour))
-print(now.minute)
-print(type(now.minute))
+# print(now.hour)
+# print(type(now.hour))
+# print(now.minute)
+# print(type(now.minute))
 
+# print_time_in_montreal()
+# print(is_dark_in_montreal())
+# print(f"Is ISS in my sky? {is_iss_in_my_sky()}")
 
-print_time_in_montreal()
-print(is_dark_in_montreal())
-print(f"Is ISS in my sky? {is_iss_in_my_sky()}")
+# check the conditions every 5 minutes
+try:
+    while True:
+        if is_dark_in_montreal() and is_iss_in_my_sky():
+                print("Look up!")
+        else:
+                print("Don't look up!")
+        time.sleep(30)  # every 5 minutes
+except KeyboardInterrupt:
+    print("Program terminated by user.")
+except Exception as e:
+    print(f"An error occurred: {e}")
