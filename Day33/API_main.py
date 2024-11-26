@@ -20,6 +20,6 @@ response.raise_for_status()
 data = response.json()
 
 # we can use it like python dictionary
-# iss_postion = data["iss_postion"]
+iss_position = data["iss_position"]
 # longitude = data["iss_position"]["longitude"]
-print(data)
+print(iss_position)
