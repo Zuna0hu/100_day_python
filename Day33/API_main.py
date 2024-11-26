@@ -22,4 +22,6 @@ data = response.json()
 # we can use it like python dictionary
 iss_position = data["iss_position"]
 # longitude = data["iss_position"]["longitude"]
+iss_long = iss_position["longitude"]
+iss_lat = iss_position["latitude"]
 print(iss_position)

@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+from API_main import iss_long,iss_lat # API_main will be executed
 
 MY_LAT = 45.501690 # Montreal
 MY_LONG = -73.567253
@@ -41,6 +42,8 @@ sunset_min = sunset.split("T")[1].split(":")[1]
 
 now = datetime.now()
 
+def is_iss_in_my_sky():
+    return (MY_LAT-5 <= float(iss_lat) <= MY_LAT+5) and (MY_LONG-5 <= float(iss_long) <= MY_LONG+5)
 
 def print_time_in_montreal():
 # approximately determine if it's DST in Montreal
@@ -93,5 +96,7 @@ print(type(now.hour))
 print(now.minute)
 print(type(now.minute))
 
+
 print_time_in_montreal()
 print(is_dark_in_montreal())
+print(f"Is ISS in my sky? {is_iss_in_my_sky()}")
