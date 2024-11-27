@@ -2,6 +2,8 @@ import requests
 from datetime import datetime
 from API_main import iss_long,iss_lat # API_main will be executed
 import time # for doing the task every 5 min
+import json
+import smtplib # sending emails
 
 MY_LAT = 45.501690 # Montreal
 MY_LONG = -73.567253
@@ -42,6 +44,27 @@ sunset_min = sunset.split("T")[1].split(":")[1]
 # Get the current date
 
 now = datetime.now()
+
+# read email and other information from config.json
+def read_json():
+    with open('config.json', 'r') as config_file: # use with to automatically close the file
+        config = json.load(config_file)
+    my_email = config['email']
+    my_password = config['password']
+    receive_email = config['receive_email']
+    return my_email, my_password, receive_email
+
+# send notification email
+def send_email():
+    my_email, my_password, receive_email = read_json()
+    with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
+        connection.starttls() # make it encripted
+        connection.login(user=my_email, password=my_password)
+        connection.sendmail(
+            from_addr=my_email,
+            to_addrs=receive_email,
+            msg="Subject:ISS in Your Sky!\n\nLook up!"
+        )
 
 def is_iss_in_my_sky():
     return (MY_LAT-5 <= float(iss_lat) <= MY_LAT+5) and (MY_LONG-5 <= float(iss_long) <= MY_LONG+5)
@@ -102,13 +125,15 @@ def is_dark_in_montreal():
 # print(f"Is ISS in my sky? {is_iss_in_my_sky()}")
 
 # check the conditions every 5 minutes
+
 try:
     while True:
         if is_dark_in_montreal() and is_iss_in_my_sky():
                 print("Look up!")
+                send_email()
         else:
                 print("Don't look up!")
-        time.sleep(30)  # every 5 minutes
+        time.sleep(300)  # every 5 minutes
 except KeyboardInterrupt:
     print("Program terminated by user.")
 except Exception as e:
