@@ -68,3 +68,34 @@ class User:
 Attributes are the things that the object will have.
 
 Like for an object of `Car` class, it has attributes like `seats = 5`
+
+
+## What is a Method
+
+A **method** is like a function that we define, but it is attached to an object.
+
+A method, unlike a function, always needs to have a `self` parameter as the first parameter. **So that when this method is called, it knows the object that calls it.**, which is to say, `self` parameter allows methods to access and interact with the attributes and methods of the specific object they’re called on.
+
+`self` is automatically passed as the first argument when you call a method using an object.
+
+For example:
+
+```Python
+class Car:
+    def enter_race_mode(self):
+        self.seats = 2
+```
+
+When we call that method, we need to get hold of the object and then use the dot notation to call it.
+
+```Python
+car_1.enter_race_mode()
+```
+
+Python actually translates it to:
+
+```Python
+Car.enter_race_mode(car_1)
+```
+
+But we prefer `car_1.enter_race_mode()` to `Car.enter_race_mode(car_1)` as it aligns with the principles of OOP, enhances **readability**, and makes code cleaner and easier to maintain. Writing `Car.enter_race_mode(car_1)` is less intuitive and bypasses some of the benefits of Python's object-oriented design.
