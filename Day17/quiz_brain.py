@@ -9,12 +9,18 @@ class QuizBrain():
         return (self.question_number < len(self.question_list))
 
     def next_question(self):
-        ans = input(f"Q.{self.question_number+1}: {self.question_list[self.question_number].text}(True/False)?") 
-        if ans == self.question_list[self.question_number].answer:
-            print("Right answer!")
-        else:
-            print("Wrong answer!")
+        question = self.question_list[self.question_number]
+        ans = input(f"Q.{self.question_number+1}: {question.text}(True/False)?") 
+        # check answer
+        right_answer = question.answer
+        self.check_answer(ans,right_answer)
         
         # add one to question number
         self.question_number += 1
         
+    def check_answer(self, user_answer,right_answer):
+        if user_answer.lower() == right_answer.lower():
+            print("Right answer!")
+        else:
+            print("Wrong answer!")
+        print(f"The right answer was: {right_answer} .")
