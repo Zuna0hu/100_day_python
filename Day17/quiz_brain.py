@@ -1,5 +1,5 @@
 class QuizBrain():
-    def __init__(self,question_list):
+    def __init__(self, question_list):
         self.question_number = 0
         self.question_list = question_list
 
@@ -13,7 +13,7 @@ class QuizBrain():
         ans = input(f"Q.{self.question_number+1}: {question.text}(True/False)?") 
         # check answer
         right_answer = question.answer
-        self.check_answer(ans,right_answer)
+        self.check_answer(ans, right_answer)
         
         # add one to question number
         self.question_number += 1
