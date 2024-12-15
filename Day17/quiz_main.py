@@ -16,8 +16,7 @@ Quiz = QuizBrain(question_bank)
 
 while (Quiz.still_has_questions()):
     Quiz.next_question()
-
-
+Quiz.print_final_score()
 
 
 
