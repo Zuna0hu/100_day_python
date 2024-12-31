@@ -23,7 +23,7 @@ To install beautifulsoup4 in a **virtual environment** and **not globally**, fol
 If you haven't created a virtual environment yet, you can create one by running the following command in your project directory:
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 ```
 This will create a directory named `.venv` (you can choose a different name) that will contain your isolated Python environment.
 
@@ -50,7 +50,7 @@ Once activated, your terminal prompt should change to show that the virtual envi
 Now that the virtual environment is active, you can install beautifulsoup4 specifically within it by running the following command:
 
 ```bash
-python -m pip install beautifulsoup4
+python3 -m pip install beautifulsoup4
 ```
 
 This will install beautifulsoup4 **only** within the virtual environment.
