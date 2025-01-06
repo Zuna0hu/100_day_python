@@ -19,5 +19,10 @@ all_anchor_tags = soup.find_all(name="a")
 # for tag in all_anchor_tags:
 #     print(tag.get("href"))
 
+# how to find an element using name and id
 heading = soup.find(name="h1", id="name")
 print(heading.getText())
+
+# how to find an element using name and class
+section_heading = soup.find(name="h3", class_="heading") # as class is a reserved keyword in Python
+print(section_heading.get("class"))
